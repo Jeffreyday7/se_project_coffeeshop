@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <meta name="author" content="Jeffrey Day" />
+    <meta name="description" content="Coffee shop landing page" />
+    <meta name="keywords" content="coffee, iced coffee" />
+    <link rel="stylesheet" href="vendor/normalize.css" />
+    <link rel="stylesheet" href="pages/index.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <nav class="nav">
+          <img
+            src="./images/logo_coffeeshop_dark.svg"
+            alt="shop logo"
+            class="header__logo"
+          />
+          <ul class="nav__links">
+            <li><a href="#recipes" class="nav__link">Recipes</a></li>
+            <li><a href="#reservation" class="nav__link">Book a table</a></li>
+            <li><a href="#menu" class="nav__link">Menu</a></li>
+            <li><a href="#about" class="nav__link">Contacts</a></li>
+          </ul>
+        </nav>
+        <h1 class="header__title">Specialty coffee</h1>
+        <span class="header__span-accent">in the Triple Peaks Library</span>
+        <p class="header__subtitle">
+          Welcome to our study zone! We've got the coffee to energize you and
+          the cozy vibes to help you get creative.
+        </p>
+        <img
+          src="./images/inside_coffee_shop.png"
+          alt="Inside the coffee shop"
+          class="header__image"
+        />
+        <div class="header__footer">
+          <div>
+            <p class="header__paragraph">Hours</p>
+            <p class="header__paragraph">Monday - Friday (10:00 - 19:00)</p>
+            <p class="header__paragraph">Saturday - Sunday (11:00 - 18:00)</p>
+          </div>
+          <p class="header__paragraph">
+            200 Success Avenue, The Town of Triple Peaks
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="recipes" id="recipes">
+          <h2 class="recipes__title">Recipes</h2>
+          <p class="recipes__subtitle">
+            Check out some recipes we've collected for your home-brewing
+            convenience:
+          </p>
+          <ul class="recipes__videos">
+            <li class="recipes__videos-item">
+              <iframe
+                class="recipes__iframe"
+                src="https://www.youtube.com/embed/j6VlT_jUVPc"
+                title="Aeropress Recipe"
+                allowfullscreen
+              ></iframe>
+              <p class="recipes__video-caption">
+                <span>Aeropress Recipe</span> <span>~5 min</span>
+              </p>
+            </li>
+            <li class="recipes__videos-item">
+              <iframe
+                class="recipes__iframe"
+                src="https://www.youtube.com/embed/st571DYYTR8"
+                title="French Press Recipe"
+                allowfullscreen
+              ></iframe>
+              <p class="recipes__video-caption">
+                <span>French Press Recipe</span> <span>~15 min</span>
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="reservation" id="reservation">
+          <div class="reservation__container">
+            <h2 class="reservation__title">Book a Table</h2>
+            <form class="reservation__form" name="reservation-form">
+              <fieldset class="reservation__fieldset">
+                <label class="reservation__label">
+                  <input type="text"
+                  
+                    class="reservation__input"
+                    name="name"
+                    placeholder="Name Surname *"
+                    required
+                  />
+                </label>
+                <label class="reservation__label">
+                  <input
+                    type="number"
+                    class="reservation__input reservation__input_type_guests"
+                    name="guests"
+                    placeholder="Number of guests (1-8)"
+                    min="1"
+                    max="8"
+                    required
+                  />
+                </label>
+                <label class="reservation__label">
+                  <input
+                    type="datetime-local"
+                    class="reservation__input reservation__input_type_datetime"
+                    name="datetime"
+                    required
+                  />
+                </label>
+                <label class="reservation__label">
+                  <input
+                    type="email"
+                    class="reservation__input"
+                    name="email"
+                    placeholder="email@example.com *"
+                    required
+                  />
+                </label>
+                <button type="submit" class="reservation__button">
+                  Book a table
+                </button>
+                <label class="reservation__checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="reservation__checkbox"
+                    name="terms"
+                    required
+                  />
+                  I agree to the terms of use
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+
+        <section class="menu" id="menu">
+          <h2 class="menu__title">Menu</h2>
+          <p class="menu__subtitle">
+            Check out our selection of specialty drinks:
+          </p>
+          <ul class="menu__items">
+            <li class="menu__item">Espresso - $3</li>
+            <li class="menu__item">Cappuccino - $4</li>
+            <li class="menu__item">Iced Coffee - $4</li>
+            <li class="menu__item">Cold Brew - $4.50</li>
+          </ul>
+        </section>
+
+        <section class="about" id="about">
+          <h2 class="about__title">About Us</h2>
+          <p class="about__text">
+            We’re located inside the Triple Peaks Library and offer a quiet,
+            cozy space for studying, relaxing, and enjoying hand-crafted coffee
+            drinks.
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer" id="contacts">
+        <div class="footer__content">
+          <img
+            src="./images/logo_coffeeshop_light.svg"
+            alt="Coffee Shop Logo"
+            class="footer__logo"
+          />
+          <p class="footer__copyright">© 2024 Coffee Shop</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
